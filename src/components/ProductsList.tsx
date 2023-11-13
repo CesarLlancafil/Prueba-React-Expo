@@ -8,14 +8,14 @@ const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [ascending, setAscending] = useState(false);
+  const [ascending, setAscending] = useState(true);
 
   useEffect(() => {
     async function fetchProducts() {
       try {
         setLoading(true);
         const data = await getProducts();
-        const sortedProducts = data.slice(); // Create a copy of the array
+        const sortedProducts = data.slice();
         sortedProducts.sort((a: Product, b: Product) =>
           ascending ? a.price - b.price : b.price - a.price
         );

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView, SafeAreaView } from 'react-native';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
 import TitleContainer from '../containers/TitleContainer';
 import BodyContainer from '../containers/BodyContainer';
 
